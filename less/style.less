@@ -1,41 +1,59 @@
 // @import "bootstrap.min.css";
 @import "bootstrap.less";
 
+//variables
+@white:        #ffffff;
+@black:        #000000;
+@black-light:  #343434;
+@gray:         #918b88;
+@gray-light:   #cccccc;
+@gray-lighter: #f8f4f4;
+@blue:         #4db2d6;
+
+
 // theme
 .navbar-default {
-  background-color: #343434;
-  // .hidden-xs();
-  // .hidden-md();
+  background-color: @black-light;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: @white;
+    z-index: -1;
+    .hidden-xs();
+  }
 }
 .jumbotron {
   background-image: url(https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg);
   margin-bottom: 0;
 }
 .nav-tabs {
-  background-color: #f8f4f4;
+  margin-bottom: 15px;
+  background-color: @gray-lighter;
   border: none;
   li {
+    padding: 0 !important;
     text-align: center;
     a {
       &:hover {
         background: none;
-        border: solid #f8f4f4 1px !important;
-        color: #000;
+        border: solid @gray-lighter 1px !important;
+        color: @black;
       }
-      color: #9b9c9e;
+      color: @gray;
       padding: 15px;
     }
   }
   .active {
+    border-bottom: solid @black 1px !important;
     a {
       &:hover {
         border: none !important;
-        border-bottom: solid #000 1px !important;
       }
-      background-color: #f8f4f4 !important;
+      background-color: @gray-lighter !important;
       border: none !important;
-      border-bottom: solid #000 1px !important;
-      color: #000;
+      color: @black;
     }
   }
 }
@@ -43,11 +61,11 @@
 // elements
 .user-info-bar {
   padding: 5px 0;
-  background-color: #cccccc; 
+  background-color: @gray-light; 
   .btn{
-    background-color: #cccccc;
+    background-color: @gray-light;
     border: none;
-    color: #ffffff;
+    color: @white;
   }
 }
 .user-name-block {
@@ -56,7 +74,7 @@
   top: 0;
   margin: -90px auto;
   padding: 15px 0 0 0;
-  color: #ffffff;
+  color: @white;
   text-align: center;
   font-size: 22px;
 }
@@ -67,14 +85,62 @@
 }
 .user-info-list {
   padding: 30px 0 0 20px;
+  list-style: none;
+  color: @white;
   li {
     margin: 0 0 5px 0;
   }
   span {
     margin: 0 5px 0 0;
   }
-  list-style: none;
-  color: #fff;
+}
+.article-block {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid @gray 1px;
+  .atricle-info {
+    margin-bottom: 10px;
+    img {
+      width: 50px;
+    }
+  }
+  .atricle-info-list {
+    margin: 5px 0 0 10px;
+    list-style: none;
+    color: @gray;
+    dt {
+      font-weight: normal;
+      font-size: 20px;
+    }
+    dd {
+      font-size: 12px;
+      color: @gray;
+    }
+  }
+  p {
+    font-size: 18px;
+    color: @gray;
+  }
+  img {
+    width: 100%;
+  }
+  .like-block {
+    margin-top: 10px;
+    font-size: 18px;
+    color: @gray; 
+    span {
+      float: left;
+      margin: 0 0 0 10px;
+    }
+  }
+}
+
+.count-block {
+  color: @white;
+  font-size: 16px;
+  span {
+    margin: 0 10px 0 20px;
+  }
 }
 
 
@@ -88,6 +154,9 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
+  .nav-tabs {
+    .container();
+  }
   .user-name-block { 
     padding: 0 0 0 0;
   }
@@ -95,9 +164,24 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) { 
+  body {
+    background-color: @gray-lighter;
+  }
   .jumbotron {
     margin-top: 55px;
     padding-bottom: 200px;
+  }
+  .nav-tabs {
+    li {
+      text-align: left;
+    }
+  }
+  .tab-pane {
+    .show();
+  }
+  .rewievs-tab-pane {
+    position: absolute;
+    background: @blue;
   }
   .user-name-block {
     .pull-left();
@@ -105,7 +189,7 @@
     width: auto;
     margin: 0;
     padding: 3px 0 0 15px;
-    color: #49bce4;
+    color: @blue;
   }
   .user-info-block {
     position: relative;
@@ -118,17 +202,35 @@
   }
   .user-info-list {
     padding: 10px 0 0 20px;
+    color: @gray;
     li {
       .pull-left();
       margin: 0 20px 0 0;
     }
-    color: #aaa;
+  }
+  .article-block {
+    padding: 0;
+    background: @white;
+    border: solid #eee 1px;
+    p {
+      padding: 20px 20px 0 20px;
+    }
+  }
+  .like-block {
+    background-color: @gray-lighter;
+    float: none !important;
+    display: block;
+    .clearfix();
+    padding: 10px 10px !important;
+    i {
+      color: @blue; 
+    }
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {  
-  
+
 }
 
 

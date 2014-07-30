@@ -56,7 +56,7 @@
         <span class="glyphicon glyphicon-share-alt"></span>
       </button>
       <button type="button" class="btn btn-default btn-lg pull-right">
-        <span class="glyphicon glyphicon-heart-empty"></span>
+        <span class="glyphicon glyphicon-heart"></span>
       </button>
     </div>
      
@@ -73,53 +73,67 @@
           <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
         </ul>
       </div>
+      <div class="count-block pull-right">
+        <span class="glyphicon glyphicon-heart"></span>23423
+        <span class="glyphicon glyphicon-play"></span>123
+        <span class="glyphicon glyphicon-play"></span>1,235
+      </div>
     </div>
     
-    <ul class="nav nav-tabs row" role="tablist">
-      <li class="col-xs-3"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
-      <li class="col-xs-3 active"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
-      <li class="col-xs-3"><a href="#info_" role="tab" data-toggle="tab">Info</a></li>
-      <li class="col-xs-3"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
-    </ul>
+    <div class="container-fluid">
+      <ul class="nav nav-tabs row" role="tablist">
+        <li class="col-xs-3 col-sm-3 col-md-1 col-lg-1"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
+        <li class="col-xs-3 col-sm-3 col-md-2 col-lg-2"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
+        <li class="col-xs-3 col-sm-3 col-md-6 col-lg-6 active"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
+        <li class="col-xs-3 col-sm-3 col-md-6 col-lg-3"><a href="#info_" role="tab" data-toggle="tab" class="hidden-md hidden-lg">Info</a></li>
+      </ul>
+    </div>
     <div class="container">
-      <div class="tab-content">
-        <div class="tab-pane" id="music_">...1</div>
-        <div class="tab-pane active" id="active_">
+      <div class="tab-content row">
+        <div class="tab-pane col-md-3 col-lg-3" id="music_">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-play"></span> 
+              <div class="pull-right">
+                <span class="glyphicon glyphicon-thumbs-up"> 43</span> 
+              </div>
+              Type specimen book
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-play"></span> 
+              <div class="pull-right">
+                <span class="glyphicon glyphicon-thumbs-up"> 43</span> 
+              </div>
+              Specimen book
+            </div>
+          </div>
+        </div>
+        <!-- <div class="rewievs-tab-pane tab-pane col-md-3 col-lg-3" id="rewievs_">...2</div> -->
+        <div class="tab-pane col-md-6 col-lg-6 active" id="active_">
           <article class="article-block clearfix">
-            <div class="atricle-info clearfix">
+            <div class="atricle-info clearfix hidden-md hidden-lg">
               <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
-              <ul class="pull-left">
-                <li>Carol Gilbert</li>
-                <li><span class="glyphicon glyphicon-time"></span>25 minute ago</li>
-              </ul>
+              <dl class="atricle-info-list pull-left">
+                <dt>Carol Gilbert</dt>
+                <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
+              </dl>
             </div>
             <p>
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
-            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive" alt="">
+            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive hidden-md hidden-lg" alt="">
             <div class="like-block pull-right">
-              <span class="glyphicon glyphicon-comment"></span>135
-            </div>
-          </article>
-          <article class="article-block clearfix">
-            <div class="atricle-info clearfix">
-              <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
-              <ul class="pull-left">
-                <li>Carol Gilbert</li>
-                <li><span class="glyphicon glyphicon-time"></span>25 minute ago</li>
-              </ul>
-            </div>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive" alt="">
-            <div class="like-block pull-right">
-              <span class="glyphicon glyphicon-comment"></span>135
+              <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
+              <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
+              <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
             </div>
           </article>
         </div>
-        <div class="tab-pane" id="info_">...3</div>
-        <div class="tab-pane" id="rewievs_">...4</div>
+        <div class="tab-pane col-md-3 col-lg-3" id="info_">
+          ...4
+        </div>
       </div>
     </div>
 
