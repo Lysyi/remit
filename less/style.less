@@ -1,12 +1,139 @@
 // @import "bootstrap.min.css";
 @import "bootstrap.less";
 
-// variables
-@body-bg:    #fff;
-
 // theme
-.navbar-inverse {
-  .hidden-xs();
-  .hidden-md();
+.navbar-default {
+  background-color: #343434;
+  // .hidden-xs();
+  // .hidden-md();
 }
+.jumbotron {
+  background-image: url(https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg);
+  margin-bottom: 0;
+}
+.nav-tabs {
+  background-color: #f8f4f4;
+  border: none;
+  li {
+    text-align: center;
+    a {
+      &:hover {
+        background: none;
+        border: solid #f8f4f4 1px !important;
+        color: #000;
+      }
+      color: #9b9c9e;
+      padding: 15px;
+    }
+  }
+  .active {
+    a {
+      &:hover {
+        border: none !important;
+        border-bottom: solid #000 1px !important;
+      }
+      background-color: #f8f4f4 !important;
+      border: none !important;
+      border-bottom: solid #000 1px !important;
+      color: #000;
+    }
+  }
+}
+
+// elements
+.user-info-bar {
+  padding: 5px 0;
+  background-color: #cccccc; 
+  .btn{
+    background-color: #cccccc;
+    border: none;
+    color: #ffffff;
+  }
+}
+.user-name-block {
+  position: relative;
+  width: 60%;
+  top: 0;
+  margin: -90px auto;
+  padding: 15px 0 0 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+}
+.user-info-block {
+  img {
+    width: 100px;
+  }
+}
+.user-info-list {
+  padding: 30px 0 0 20px;
+  li {
+    margin: 0 0 5px 0;
+  }
+  span {
+    margin: 0 5px 0 0;
+  }
+  list-style: none;
+  color: #fff;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (mobile) */
+@media (min-width: @screen-xs-min) {
+  
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .user-name-block { 
+    padding: 0 0 0 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  .jumbotron {
+    margin-top: 55px;
+    padding-bottom: 200px;
+  }
+  .user-name-block {
+    .pull-left();
+    position: inherit;
+    width: auto;
+    margin: 0;
+    padding: 3px 0 0 15px;
+    color: #49bce4;
+  }
+  .user-info-block {
+    position: relative;
+    top: -100px;
+    padding: 5px 0;
+    height: 50px;
+    img {
+      width: 40px;
+    }
+  }
+  .user-info-list {
+    padding: 10px 0 0 20px;
+    li {
+      .pull-left();
+      margin: 0 20px 0 0;
+    }
+    color: #aaa;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {  
+  
+}
+
+
+// @media (max-width: @screen-xs-max) {  }
+// @media (min-width: @screen-md) and (max-width: @screen-lg-min) {  }
+// @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {  }
+// @media (min-width: @screen-lg-min) {  }
 

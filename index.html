@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
 
+  <head>
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,9 +17,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
 
-    <header class="top navbar-inverse" role="header">
+    <header class="top navbar-default hidden-xs hidden-sm" role="header">
         <div class="container">
             <a href="#" class="navbar-brand pull-left">
                 Logo
@@ -33,7 +34,7 @@
                     <li><a href="#">Tavlingar</a></li>
                 </ul>
             </nav>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav pull-right">
               <li id="fat-menu" class="dropdown">
                 <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
                   My profile <span class="caret"></span>
@@ -46,80 +47,156 @@
             </ul>
         </div>
     </header>
-
-  <div class="container">
-    <!-- <h1>Hello, world! <button type="button" class="btn btn-primary btn-lg">Large button</button></h1> -->
-    <div class="row">
-      <div></div>
+    
+    <div class="container-fluid btn-toolbar hidden-md hidden-lg user-info-bar" role="toolbar">
+      <button type="button" class="btn btn-default btn-lg pull-left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </button>
+      <button type="button" class="btn btn-default btn-lg pull-right">
+        <span class="glyphicon glyphicon-share-alt"></span>
+      </button>
+      <button type="button" class="btn btn-default btn-lg pull-right">
+        <span class="glyphicon glyphicon-heart-empty"></span>
+      </button>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-        quae ab illo inventore veritatis et quasi architecto beatae vitae
-        dicta sunt explicabo.
-        </p>
-      </div>
-      <div class="col-md-6">
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium.
-        </p>
-        <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem.
-        </p>
-      </div>
-      <div class="col-md-2">
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium.
-        </p>
-        <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem.
-        </p>
+     
+    <div class="container jumbotron">
+      <div class="row user-info-block">
+        <div class="pull-left">
+          <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="img-circle img-responsive">
+        </div>
+        <div class="user-name-block">
+          Carol Gilbert
+        </div>
+        <ul class="pull-left user-info-list">
+          <li><span class="glyphicon glyphicon-map-marker"></span>City</li>
+          <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
+        </ul>
       </div>
     </div>
-  </div>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">test</div>
+    
+    <ul class="nav nav-tabs row" role="tablist">
+      <li class="col-xs-3"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
+      <li class="col-xs-3 active"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
+      <li class="col-xs-3"><a href="#info_" role="tab" data-toggle="tab">Info</a></li>
+      <li class="col-xs-3"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
+    </ul>
+    <div class="container">
+      <div class="tab-content">
+        <div class="tab-pane" id="music_">...1</div>
+        <div class="tab-pane active" id="active_">
+          <article class="article-block clearfix">
+            <div class="atricle-info clearfix">
+              <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
+              <ul class="pull-left">
+                <li>Carol Gilbert</li>
+                <li><span class="glyphicon glyphicon-time"></span>25 minute ago</li>
+              </ul>
+            </div>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive" alt="">
+            <div class="like-block pull-right">
+              <span class="glyphicon glyphicon-comment"></span>135
+            </div>
+          </article>
+          <article class="article-block clearfix">
+            <div class="atricle-info clearfix">
+              <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
+              <ul class="pull-left">
+                <li>Carol Gilbert</li>
+                <li><span class="glyphicon glyphicon-time"></span>25 minute ago</li>
+              </ul>
+            </div>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive" alt="">
+            <div class="like-block pull-right">
+              <span class="glyphicon glyphicon-comment"></span>135
+            </div>
+          </article>
+        </div>
+        <div class="tab-pane" id="info_">...3</div>
+        <div class="tab-pane" id="rewievs_">...4</div>
+      </div>
     </div>
-  </div>
 
-  <div class="container" style="padding: 40px;">
-     <div class="row visible-on">
-        <div class="col-xs-6 col-sm-3">
-           <span class="hidden-xs">Extra small</span>
-           <span class="visible-xs">✔ Visible on x-small</span>
+
+
+    <!-- <div class="container">
+      <h1>Hello, world! <button type="button" class="btn btn-primary btn-lg">Large button</button></h1>
+      
+      <div class="row">
+        <div class="col-md-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+          </p>
         </div>
-        <div class="col-xs-6 col-sm-3">
-           <span class="hidden-sm">Small</span>
-           <span class="visible-sm">✔ Visible on small</span>
+        <div class="col-md-6">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium.
+          </p>
+          <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi
+          tempora incidunt ut labore et dolore magnam aliquam quaerat
+          voluptatem.
+          </p>
         </div>
-        <div class="clearfix visible-xs"></div>
-        <div class="col-xs-6 col-sm-3">
-           <span class="hidden-md">Medium</span>
-           <span class="visible-md">✔ Visible on medium</span>
+        <div class="col-md-2">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium.
+          </p>
+          <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi
+          tempora incidunt ut labore et dolore magnam aliquam quaerat
+          voluptatem.
+          </p>
         </div>
-        <div class="col-xs-6 col-sm-3">
-           <span class="hidden-lg">Large</span>
-           <span class="visible-lg">✔ Visible on large</span>
-        </div>
+      </div>
     </div>
-  </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">test</div>
+      </div>
+    </div>
 
+    <div class="container" style="padding: 40px;">
+       <div class="row visible-on">
+          <div class="col-xs-6 col-sm-3">
+             <span class="hidden-xs">Extra small</span>
+             <span class="visible-xs">✔ Visible on x-small</span>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+             <span class="hidden-sm">Small</span>
+             <span class="visible-sm">✔ Visible on small</span>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-3">
+             <span class="hidden-md">Medium</span>
+             <span class="visible-md">✔ Visible on medium</span>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+             <span class="hidden-lg">Large</span>
+             <span class="visible-lg">✔ Visible on large</span>
+          </div>
+      </div>
+    </div> -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
   </body>
+
 </html>
