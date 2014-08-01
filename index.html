@@ -19,11 +19,11 @@
   </head>
 
   <body>
-
-    <header class="top navbar-default hidden-xs hidden-sm" role="header">
+    <div class="wrap clearfix">
+      <header class="top navbar-default hidden-xs hidden-sm" role="header">
         <div class="container">
             <a href="#" class="navbar-brand pull-left">
-                Logo
+                <span class="glyphicon glyphicon-fire"></span>
             </a>
             <nav class="pull-left">
                 <ul class="navbar-nav nav">
@@ -46,119 +46,158 @@
               </li>
             </ul>
         </div>
-    </header>
-    
-    <div class="container-fluid btn-toolbar hidden-md hidden-lg user-info-bar" role="toolbar">
-      <button type="button" class="btn btn-default btn-lg pull-left">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </button>
-      <button type="button" class="btn btn-default btn-lg pull-right">
-        <span class="glyphicon glyphicon-share-alt"></span>
-      </button>
-      <button type="button" class="btn btn-default btn-lg pull-right">
-        <span class="glyphicon glyphicon-heart"></span>
-      </button>
-    </div>
-     
-    <div class="container jumbotron">
-      <div class="row user-info-block">
-        <div class="pull-left">
-          <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="img-circle img-responsive">
+      </header>
+      
+      <div class="container-fluid btn-toolbar hidden-md hidden-lg user-info-bar" role="toolbar">
+        <button type="button" class="btn btn-default btn-lg pull-left">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-lg pull-right">
+          <span class="glyphicon glyphicon-share-alt"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-lg pull-right">
+          <span class="glyphicon glyphicon-heart-empty"></span>
+        </button>
+      </div>
+       
+      <div class="container jumbotron">
+        <div class="row user-info-block">
+          <div class="pull-left">
+            <img src="img/avatar-img.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="user-name-block">
+            Carol Gilbert
+          </div>
+          <ul class="pull-left user-info-list">
+            <li><span class="glyphicon glyphicon-map-marker"></span>City</li>
+            <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
+          </ul>
         </div>
-        <div class="user-name-block">
-          Carol Gilbert
+        <div class="count-block pull-right hidden-md hidden-lg">
+          <span class="glyphicon glyphicon-heart"></span>23423
+          <span class="glyphicon glyphicon-play"></span>123
+          <span class="glyphicon glyphicon-certificate"></span>1,235
         </div>
-        <ul class="pull-left user-info-list">
-          <li><span class="glyphicon glyphicon-map-marker"></span>City</li>
-          <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
+      </div>    
+      
+      <div class="container-fluid">
+        <ul class="nav nav-tabs row" role="tablist">
+          <li class="col-xs-3 col-sm-3 col-md-1 col-lg-1 active"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
+          <li class="col-xs-3 col-sm-3 col-md-2 col-lg-2"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
+          <li class="col-xs-3 col-sm-3 col-md-6 col-lg-6"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
+          <li class="col-xs-3 col-sm-3 col-md-6 col-lg-3"><a href="#info_" role="tab" data-toggle="tab" class="hidden-md hidden-lg">Info</a></li>
         </ul>
       </div>
-      <div class="count-block pull-right hidden-md hidden-lg">
-        <span class="glyphicon glyphicon-heart"></span>23423
-        <span class="glyphicon glyphicon-play"></span>123
-        <span class="glyphicon glyphicon-play"></span>1,235
-      </div>
-    </div>
-    
-    <div class="container-fluid">
-      <ul class="nav nav-tabs row" role="tablist">
-        <li class="col-xs-3 col-sm-3 col-md-1 col-lg-1"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
-        <li class="col-xs-3 col-sm-3 col-md-2 col-lg-2"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
-        <li class="col-xs-3 col-sm-3 col-md-6 col-lg-6 active"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
-        <li class="col-xs-3 col-sm-3 col-md-6 col-lg-3"><a href="#info_" role="tab" data-toggle="tab" class="hidden-md hidden-lg">Info</a></li>
-      </ul>
-    </div>
-    <div class="container">
-      <div class="tab-content row">
-        <div class="tab-pane col-md-3 col-lg-3" id="music_">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <span class="glyphicon glyphicon-play"></span> 
-              <div class="pull-right">
-                <span class="glyphicon glyphicon-thumbs-up"> 43</span> 
+      
+      <div class="container">
+        <div class="tab-content row">
+          <div class="tab-pane col-md-3 col-lg-3 active" id="music_">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <span class="panel-like-block pull-right">
+                  434
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </span>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Aautem optio
+                </a>
               </div>
-              Type specimen book
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <span class="panel-like-block pull-right">
+                  23
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </span>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Maiores ullam aspernatur deserunt
+                </a>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <span class="panel-like-block pull-right">
+                  10
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </span>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Blanditiis ratione
+                </a>
+              </div>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <span class="glyphicon glyphicon-play"></span> 
-              <div class="pull-right">
-                <span class="glyphicon glyphicon-thumbs-up"> 43</span> 
+          <!-- <div class="rewievs-tab-pane tab-pane col-md-3 col-lg-3" id="rewievs_">...2</div> -->
+          <div class="tab-pane col-md-6 col-lg-6" id="active_">
+            <article class="article-block clearfix">
+              <div class="atricle-info clearfix hidden-md hidden-lg">
+                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive">
+                <dl class="atricle-info-list pull-left">
+                  <dt>Carol Gilbert</dt>
+                  <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
+                </dl>
               </div>
-              Specimen book
-            </div>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg" alt="">
+              <div class="like-block pull-right">
+                <span class="glyphicon glyphicon-heart-empty hidden-md hidden-lg"></span> 
+                <span class="pull-left hidden-md hidden-lg">147</span>
+                <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
+                <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
+                <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
+              </div>
+            </article>
+            <article class="article-block clearfix">
+              <div class="atricle-info clearfix hidden-md hidden-lg">
+                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive">
+                <dl class="atricle-info-list pull-left">
+                  <dt>Carol Gilbert</dt>
+                  <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
+                </dl>
+              </div>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg" alt="">
+              <div class="like-block pull-right">
+                <span class="glyphicon glyphicon-heart-empty hidden-md hidden-lg"></span> 
+                <span class="pull-left hidden-md hidden-lg">147</span>
+                <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
+                <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
+                <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
+              </div>
+            </article>
+          </div>
+          <div class="tab-pane col-md-3 col-lg-3" id="info_">
+            ...4
           </div>
         </div>
-        <!-- <div class="rewievs-tab-pane tab-pane col-md-3 col-lg-3" id="rewievs_">...2</div> -->
-        <div class="tab-pane col-md-6 col-lg-6 active" id="active_">
-          <article class="article-block clearfix">
-            <div class="atricle-info clearfix hidden-md hidden-lg">
-              <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
-              <dl class="atricle-info-list pull-left">
-                <dt>Carol Gilbert</dt>
-                <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
-              </dl>
-            </div>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive hidden-md hidden-lg" alt="">
-            <div class="like-block pull-right">
-              <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
-              <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
-              <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
-            </div>
-          </article>
-          <article class="article-block clearfix">
-            <div class="atricle-info clearfix hidden-md hidden-lg">
-              <img src="https://d13yacurqjgara.cloudfront.net/users/783/avatars/normal/brad-avatar-square.png?1383856562" class="pull-left img-circle img-responsive">
-              <dl class="atricle-info-list pull-left">
-                <dt>Carol Gilbert</dt>
-                <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
-              </dl>
-            </div>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-            <img src="https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg" class="img-responsive hidden-md hidden-lg" alt="">
-            <div class="like-block pull-right">
-              <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
-              <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
-              <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
-            </div>
-          </article>
-        </div>
-        <div class="tab-pane col-md-3 col-lg-3" id="info_">
-          ...4
-        </div>
       </div>
+
+      <div class="push">s</div>
     </div>
+    <footer class="footer">
+      <button type="button" class="btn eject-play" data-toggle="collapse" data-target="#footer-play">
+        <span class="glyphicon glyphicon-eject"></span>
+      </button>
+
+      <div id="footer-play" class="footer-play collapse in">
+        виаsdfsdaf
+      </div>
+      
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('.collapse').collapse()
+    </script>
 
   </body>
 

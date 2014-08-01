@@ -6,10 +6,32 @@
 @black:        #000000;
 @black-light:  #343434;
 @gray:         #918b88;
+@gray-dark:    #e7e7e7;
 @gray-light:   #cccccc;
 @gray-lighter: #f8f4f4;
 @blue:         #4db2d6;
 
+// main
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -70px;
+}
+
+.push {
+  height: 70px; 
+}
+
+.footer {
+  position: relative;
+  height: 70px;
+}
 
 // theme
 .navbar-default {
@@ -23,9 +45,17 @@
     z-index: -1;
     .hidden-xs();
   }
+  .navbar-brand {
+    padding: 15px 5px;
+  }
+  a {
+    color: @white !important;
+  }
 }
 .jumbotron {
-  background-image: url(https://blog.avast.com/wp-content/uploads/2014/01/IMG-private-browsing.jpg);
+  background-image: url(../img/header-img.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   margin-bottom: 0;
 }
 .nav-tabs {
@@ -33,28 +63,40 @@
   background-color: @gray-lighter;
   border: none;
   li {
-    padding: 0 !important;
+    padding: 0;
+    margin: 0;
     text-align: center;
     a {
-      &:hover {
-        background: none;
-        border: solid @gray-lighter 1px !important;
-        color: @black;
-      }
-      color: @gray;
       padding: 15px;
+      font-size: 18px;       
+      color: @gray;
     }
   }
   .active {
-    border-bottom: solid @black 1px !important;
+    border-bottom: solid @black 1px;
     a {
-      &:hover {
-        border: none !important;
-      }
       background-color: @gray-lighter !important;
-      border: none !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
       color: @black;
     }
+  }
+}
+.panel-default {
+  margin-bottom: 10px;
+  border: none;
+  .panel-heading {
+    .border-top-radius(5);
+    .border-bottom-radius(5);
+    background: @gray-dark;
+    border: none;
+    a {
+      color: @gray;
+    }
+  }
+  .panel-like-block {
+    color: @blue;
   }
 }
 
@@ -81,6 +123,7 @@
 .user-info-block {
   img {
     width: 100px;
+    border: solid @white 2px;
   }
 }
 .user-info-list {
@@ -113,7 +156,7 @@
       font-size: 20px;
     }
     dd {
-      font-size: 12px;
+      font-size: 15px;
       color: @gray;
     }
   }
@@ -127,14 +170,13 @@
   .like-block {
     margin-top: 10px;
     font-size: 18px;
-    color: @gray; 
+    color: @gray-light; 
     span {
       float: left;
       margin: 0 0 0 10px;
     }
   }
 }
-
 .count-block {
   color: @white;
   font-size: 16px;
@@ -142,14 +184,27 @@
     margin: 0 10px 0 20px;
   }
 }
-
+.eject-play {
+  position: relative;
+  margin: -55px 0 0 -20px;
+  left: 50%;
+  bottom: -100%;
+}
+.footer-play {
+  position: relative;
+  margin-top: -20px; 
+  height: 70px;
+  background-color: @gray-light; 
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (mobile) */
 @media (min-width: @screen-xs-min) {
-  
+  .nav-tabs {
+
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -174,6 +229,21 @@
   .nav-tabs {
     li {
       text-align: left;
+      &:after {
+        content: '';
+        width: 100%;
+        position: relative;
+        border-bottom: solid @gray 1px !important;
+      }
+      a {
+        .pull-left();
+        padding: 15px 0 5px 0;
+        border-bottom: solid @blue 1px !important;
+        font-size: 14px;
+      }
+    }
+    .active {
+      border-bottom: none !important;
     }
   }
   .tab-pane {
@@ -198,6 +268,8 @@
     height: 50px;
     img {
       width: 40px;
+      .border-top-radius(0);
+      .border-bottom-radius(0);
     }
   }
   .user-info-list {
