@@ -1,0 +1,142 @@
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (mobile) */
+@media (min-width: @screen-xs-min) {
+  .nav-tabs {
+
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {  
+
+  .user-name-block { 
+    padding: 20px 0 0 0;
+  }
+
+  .jumbotron-section {
+    .container();
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  
+  body {
+    background-color: @body-bg-screen;
+  }
+
+  .jumbotron-section {
+    .container();
+  }
+
+  .jumbotron {
+    margin-top: 65px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 200px;
+  }
+
+  .user-name-block {
+    .pull-left();
+    position: inherit;
+    width: auto;
+    margin: 0;
+    padding: 3px 0 0 15px;
+    color: @blue;
+  }
+
+  .user-info-block {
+    position: relative;
+    top: -87px;
+    padding: 5px 0;
+    height: 50px;
+    img {
+      width: 40px;
+      .rounded(4px);
+    }
+  }
+
+  .user-info-list {
+    padding: 10px 0 0 20px;
+    color: @gray-lighter;
+    li {
+      .pull-left();
+      margin: 0 20px 0 0;
+    }
+  }
+  
+  .article-block {
+    padding: 0;
+    background: @white;
+    border: solid @gray-lighter 1px;
+    &:last-child {
+      border-bottom: solid @gray-lighter 1px;
+    }
+    p {
+      padding: 20px 20px 0 20px;
+      font-size: @font-size-base;
+      color: @gray; 
+    }
+    .like-block {
+      font-size: @font-size-base;
+      color: @gray; 
+      span {
+        margin: 0 10px 0 0;
+      }
+      i {
+        font-style: normal;
+      }
+    }
+  }
+
+  .like-block {
+    background-color: @body-bg-screen;
+    float: none !important;
+    display: block;
+    .clearfix();
+    padding: 10px 10px !important;
+    i {
+      color: @blue; 
+    }
+  }
+
+  .sidebar-content {
+    font-size: @font-size-base;
+    img {
+      width: 40px;
+      margin: 0 2px 2px 0;
+    }
+  }
+
+  .sidebar-title {
+    font-size: @font-size-base;
+  }
+
+  .tab-pane {
+    .show();
+  }
+
+  // .rewievs-tab-pane {
+  //   position: absolute;
+  //   background: @blue;
+  // }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {  
+
+}
+
+
+// @media (max-width: @screen-xs-max) {  }
+// @media (min-width: @screen-md) and (max-width: @screen-lg-min) {  }
+// @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {  }
+// @media (min-width: @screen-lg-min) {  }
+
+
+

@@ -3,9 +3,11 @@
 
   <head>
     <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <!--[if IE]>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" >
     <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -20,7 +22,7 @@
 
   <body>
     <div class="wrap clearfix">
-      <header class="top navbar-default hidden-xs hidden-sm" role="header">
+      <div class="top navbar-default hidden-xs hidden-sm">
         <div class="container">
             <a href="#" class="navbar-brand pull-left">
                 <span class="glyphicon glyphicon-fire"></span>
@@ -35,6 +37,7 @@
                 </ul>
             </nav>
             <ul class="nav navbar-nav pull-right">
+              <li><a href="#">Link</a></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
                   My profile <span class="caret"></span>
@@ -45,8 +48,16 @@
                 </ul>
               </li>
             </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </form>
         </div>
-      </header>
+      </div>
       
       <div class="container-fluid btn-toolbar hidden-md hidden-lg user-info-bar" role="toolbar">
         <button type="button" class="btn btn-default btn-lg pull-left">
@@ -60,44 +71,46 @@
         </button>
       </div>
        
-      <div class="container jumbotron">
-        <div class="row user-info-block">
-          <div class="pull-left">
-            <img src="img/avatar-img.jpg" class="img-circle img-responsive">
+      <div class="jumbotron-section">
+        <div class="jumbotron">
+          <div class="row user-info-block">
+            <div class="pull-left">
+              <img src="img/avatar-img.jpg" class="img-circle img-responsive" alt="some text">
+            </div>
+            <div class="user-name-block">
+              Carol Gilbert
+            </div>
+            <ul class="pull-left user-info-list">
+              <li><span class="glyphicon glyphicon-map-marker"></span>City</li>
+              <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
+            </ul>
           </div>
-          <div class="user-name-block">
-            Carol Gilbert
+          <div class="count-block pull-right hidden-md hidden-lg">
+            <span class="glyphicon glyphicon-heart"></span>23423
+            <span class="glyphicon glyphicon-play"></span>123
+            <span class="glyphicon glyphicon-certificate"></span>1,235
           </div>
-          <ul class="pull-left user-info-list">
-            <li><span class="glyphicon glyphicon-map-marker"></span>City</li>
-            <li><span class="glyphicon glyphicon-tag"></span>Country / More / Info</li>
-          </ul>
-        </div>
-        <div class="count-block pull-right hidden-md hidden-lg">
-          <span class="glyphicon glyphicon-heart"></span>23423
-          <span class="glyphicon glyphicon-play"></span>123
-          <span class="glyphicon glyphicon-certificate"></span>1,235
-        </div>
-      </div>    
-      
-      <div class="container-fluid">
-        <ul class="nav nav-tabs row" role="tablist">
-          <li class="col-xs-3 col-sm-3 col-md-1 col-lg-1 active"><a href="#music_" role="tab" data-toggle="tab">Music</a></li>
-          <li class="col-xs-3 col-sm-3 col-md-2 col-lg-2"><a href="#rewievs_" role="tab" data-toggle="tab">Rewievs</a></li>
-          <li class="col-xs-3 col-sm-3 col-md-6 col-lg-6"><a href="#active_" role="tab" data-toggle="tab">Active</a></li>
-          <li class="col-xs-3 col-sm-3 col-md-6 col-lg-3"><a href="#info_" role="tab" data-toggle="tab" class="hidden-md hidden-lg">Info</a></li>
+        </div>    
+      </div>
+        
+      <div class="main-navigation">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="col-xs-3 col-sm-3 col-md-1 col-lg-1 active"><a href="#music_" role="tab" data-toggle="tab"><span>Music</span></a></li>
+          <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><a href="#rewievs_" role="tab" data-toggle="tab"><span>Rewievs</span></a></li>
+          <li class="col-xs-3 col-sm-3 col-md-5 col-lg-5"><a href="#active_" role="tab" data-toggle="tab"><span>Active</span></a></li>
+          <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 hidden-md hidden-lg"><a href="#info_" role="tab" data-toggle="tab" class=""><span>Info</span></a></li>
         </ul>
       </div>
       
       <div class="container">
         <div class="tab-content row">
-          <div class="tab-pane col-md-3 col-lg-3 active" id="music_">
+          <div class="tab-pane col-md-4 col-lg-4 active" id="music_">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <span class="panel-like-block pull-right">
+                <a href="#" class="panel-like-block pull-right">
                   434
                   <span class="glyphicon glyphicon-thumbs-up"> </span> 
-                </span>
+                </a>
                 <a href="#">
                   <span class="glyphicon glyphicon-play"></span> 
                   Aautem optio
@@ -106,10 +119,10 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <span class="panel-like-block pull-right">
-                  23
+                <a href="#" class="panel-like-block pull-right">
+                  44
                   <span class="glyphicon glyphicon-thumbs-up"> </span> 
-                </span>
+                </a>
                 <a href="#">
                   <span class="glyphicon glyphicon-play"></span> 
                   Maiores ullam aspernatur deserunt
@@ -118,10 +131,10 @@
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                <span class="panel-like-block pull-right">
-                  10
+                <a href="#" class="panel-like-block pull-right">
+                  7
                   <span class="glyphicon glyphicon-thumbs-up"> </span> 
-                </span>
+                </a>
                 <a href="#">
                   <span class="glyphicon glyphicon-play"></span> 
                   Blanditiis ratione
@@ -130,10 +143,10 @@
             </div>
           </div>
           <!-- <div class="rewievs-tab-pane tab-pane col-md-3 col-lg-3" id="rewievs_">...2</div> -->
-          <div class="tab-pane col-md-6 col-lg-6" id="active_">
+          <div class="tab-pane col-md-5 col-lg-5" id="active_">
             <article class="article-block clearfix">
               <div class="atricle-info clearfix hidden-md hidden-lg">
-                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive">
+                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive" alt="some text">
                 <dl class="atricle-info-list pull-left">
                   <dt>Carol Gilbert</dt>
                   <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
@@ -142,18 +155,18 @@
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               </p>
-              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg" alt="">
+              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg" alt="some text">
               <div class="like-block pull-right">
                 <span class="glyphicon glyphicon-heart-empty hidden-md hidden-lg"></span> 
                 <span class="pull-left hidden-md hidden-lg">147</span>
                 <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
                 <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
-                <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
+                <span class="pull-left"><i class="visible-md visible-lg">0 komment</i></span>
               </div>
             </article>
             <article class="article-block clearfix">
               <div class="atricle-info clearfix hidden-md hidden-lg">
-                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive">
+                <img src="img/avatar-img.jpg" class="pull-left img-circle img-responsive" alt="some text">
                 <dl class="atricle-info-list pull-left">
                   <dt>Carol Gilbert</dt>
                   <dd><span class="glyphicon glyphicon-time"></span><span> 25 minute ago</span></dd>
@@ -162,41 +175,105 @@
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               </p>
-              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg" alt="">
+              <img src="img/content-img.jpg" class="img-responsive hidden-md hidden-lg"  alt="some text">
               <div class="like-block pull-right">
                 <span class="glyphicon glyphicon-heart-empty hidden-md hidden-lg"></span> 
                 <span class="pull-left hidden-md hidden-lg">147</span>
                 <span class="glyphicon glyphicon-comment hidden-md hidden-lg"></span> 
                 <span class="pull-left">135</span><span class="pull-left visible-md visible-lg">manader</span>
-                <span class-"pull-left"><i class="visible-md visible-lg">0 komment</i></span>
+                <span class="pull-left"><i class="visible-md visible-lg">0 komment</i></span>
               </div>
             </article>
           </div>
           <div class="tab-pane col-md-3 col-lg-3" id="info_">
-            ...4
+            <div class="sidebar-content clearfix">
+              <h5 class="sidebar-title clearfix"><span>Biografi</span><i>1</i></h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus adipisci nihil omnis fugit, corporis cumque rem dicta sequi 
+              </p>
+            </div>
+            <div class="sidebar-content clearfix">
+              <h5 class="sidebar-title clearfix"><span>Consectetur</span><i>12</i></h5>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+            </div>
+            <div class="sidebar-content clearfix">
+              <h5 class="sidebar-title clearfix"><span>Photo</span><i>452</i></h5>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+              <a href="#">
+                <img src="img/avatar-img.jpg" alt="some text">
+              </a>
+            </div>
+            <div class="sidebar-content clearfix">
+              <ul>
+                <li>
+                  <a href="#">https://www.fs-book.com/</a>
+                </li>
+                <li>
+                  <a href="#">https://www.fsdfebosdaok.com/</a>
+                </li>
+                <li>
+                  <a href="#">https://www.facek.com/</a>
+                </li>
+                <li>
+                  <a href="#">https://www.facebook.com/</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="push">s</div>
+      <div class="push"></div>
     </div>
     <footer class="footer">
-      <button type="button" class="btn eject-play" data-toggle="collapse" data-target="#footer-play">
-        <span class="glyphicon glyphicon-eject"></span>
-      </button>
-
-      <div id="footer-play" class="footer-play collapse in">
-        виаsdfsdaf
+      <div class="multimedia-container">
+        <div class="eject-button">
+          <span class="glyphicon glyphicon-eject"></span>
+        </div>
+        <div class="multimedia-block">
+          <img src="img/avatar-img.jpg" alt="some text">
+          Carol Gilbert
+          <span>A culpa amet vero accusamus eveniet</span>
+          <audio>
+            <source src="multimedia/horse.ogg" type="audio/ogg">
+            <source src="multimedia/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
-      
     </footer>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <script>
-      $('.collapse').collapse()
+      // $('.collapse').collapse()
+      
     </script>
 
   </body>

@@ -1,0 +1,256 @@
+/*
+    This is the second styling layer of our application
+    Here should be written complete self-standing modules, that are injected on certain pages
+    You should:
+        - add only complete seld-standing modules, that make sense on their own
+        - name your modules according to their functionality (e.g. login-form, comment-block)
+        - use nesting (every module should have only one top level parent - wrapper)
+        - add variable with certain attribute value to variables.less and then call it here
+    You shouldn't:
+        - add custom styling, that should be applied only on certain pages (consider 'pages.less' instead)
+        - directly specify any property value, without checking variables.less first (it might already be there)
+*/
+
+.navbar-default {
+  border-top: solid @gray-lighter 1px;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 41px;
+    #gradient > .horizontal-three-colors(#e05152, #585fe0, 50%, #81e052);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: @white;
+    z-index: -1;
+  }
+  a {
+    font-size: @font-size-small;
+  }
+  .navbar-brand {
+    font-size: @font-size-large;
+  }
+  .btn-default {
+    .button-variant(@gray; @gray; @gray;);
+  }
+  .navbar-form {
+    margin-top: 7px;
+  }
+  .form-control {
+    width: 30px !important;
+    height: 25px;
+    background: @gray;
+    border-color: @gray;
+    color: @white;
+    &:focus{
+      border: none;
+    }
+  }
+  .input-default {
+    .button-variant(@gray; @gray; @gray;);
+  }
+  .btn-default {
+    width: 25px;
+    height: 25px;
+    padding: 0 !important;
+    span {
+      font-size: 10px;
+      color: @white;
+    }    
+  }
+}
+
+.user-info-bar {
+  padding: 5px 0;
+  background-color: @gray-lighter; 
+  .btn {
+    background-color: @gray-lighter;
+    border: none;
+    color: @white;
+  }
+}
+
+.user-name-block {
+  position: relative;
+  width: 60%;
+  top: 0;
+  margin: -95px auto;
+  padding: 20px 0 0 0;
+  color: @white;
+  text-align: center;
+  font-size: @font-size-h3;
+}
+
+.jumbotron {
+  background-image: url(../img/header-img.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    @jumbotron-padding;
+    padding-bottom: @jumbotron-padding;
+
+    .container & {
+      padding-left:  @jumbotron-padding;
+      padding-right: @jumbotron-padding;
+    }
+  }
+}
+
+.user-info-block {
+  img {
+    width: 100px;
+    border: solid @white 2px;
+  }
+}
+
+.user-info-list {
+  padding: 30px 0 0 20px;
+  list-style: none;
+  color: @white;
+  li {
+      margin: 0 0 5px 0;
+  }
+  span {
+      margin: 0 5px 0 0;
+  }
+}
+
+.count-block {
+  color: @white;
+  font-size: @font-size-base;
+  span {
+    margin: 0 10px 0 20px;
+  }
+}
+
+.panel-default {
+  margin-bottom: 10px;
+  a {
+    color: @panel-default-text;
+    text-decoration: none;
+  }
+  .panel-heading {
+    .rounded(5px)
+  }
+  .panel-like-block {
+    color: @blue !important;
+    text-decoration: none;
+  }
+}
+
+.article-block {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid @gray-lighter 1px;
+  &:last-child {
+    border-bottom: none;
+  }
+  p {
+    font-size: @font-size-h3;
+    color: @gray-light; 
+  }
+  img {
+    width: 100%;
+    border: solid @gray-lighter 2px;
+    .rounded(3px);
+  }
+  .atricle-info {
+    margin-bottom: 10px;
+    img {
+      width: 60px;
+      .rounded(50px);
+      border: none;
+    }
+  }
+  .atricle-info-list {
+    margin: 5px 0 0 10px;
+    list-style: none;
+    color: @gray-light; 
+    dt {
+      font-weight: normal;
+      font-size: @font-size-h3;
+    }
+    dd {
+      color: @gray-light; 
+      font-size: @font-size-large;
+    }
+  }
+  .like-block {
+    margin-top: 10px;
+    font-size: @font-size-h3;
+    color: @gray-light; 
+    span {
+      float: left;
+      margin: 0 0 0 10px;
+    }
+  }
+}
+
+.sidebar-content {
+  margin: 0 0 15px 0;
+  font-size: @font-size-large;
+  p {
+    text-align: justify;
+  }
+  img {
+    float: left;
+    width: 65px;
+    margin: 0 5px 5px 0;
+    .rounded(4px);
+  }
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sidebar-title {
+  margin: 0 0 10px 0;
+  padding: 0;
+  border-bottom: solid @gray-lighter 1px;
+  color: @blue;
+  font-size: @font-size-large;
+  span {
+    float: left;
+    margin: 0 0 -1px 0;
+    padding: 0 0 5px 0;
+    border-bottom: solid @blue 1px;
+  }
+  i {
+    float: right;
+    margin: 0 0 -1px 0;
+    padding: 0 0 5px 0;
+    border-bottom: solid @blue 1px;
+    font-style: normal;
+  }
+}
+
+.multimedia-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.eject-button {
+  width: 55px;
+  height: 40px;
+  margin: 0 auto;
+  background: @gray-light;
+  font-size: @font-size-large;
+  color: @gray-lighter;
+  .border-radius(5px, 0, 0, 5px);
+}
+
+.multimedia-block {
+  height: 0px;
+  background-color: @gray-light;
+}
+
