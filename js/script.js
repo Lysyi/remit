@@ -4,6 +4,6 @@ $('.eject-button').click(function(event){
 	    $('.multimedia-block').animate({height : '0px'}, 500);
 	}
 	else {
-	    $('.multimedia-block').animate({height : '90px'},  500);
+	    $('.multimedia-block').animate({height : '40px'},  500);
 	}
 });
