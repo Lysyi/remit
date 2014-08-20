@@ -27,7 +27,7 @@
 
 .miltimedia-info {
   display: inline-block;
-  width: 65%;
+  width: 60%;
   height: 90px;
   vertical-align: top;
   color: @white;
@@ -50,7 +50,7 @@
 
 .multimedia-controls {
   display: inline-block;
-  width: 32%;
+  width: 37%;
   padding: 0 0 0 0;
   height: 90px;
   vertical-align: top;
@@ -58,15 +58,22 @@
   white-space: nowrap;
   li {
     float: right;
-    padding: 35px 0 0 0;
+    padding: 30px 0 0 0;
     vertical-align: top;
     a {
       display: block;
-      padding: 0 5px 0 5px;
-      color: @gray-lighter;
+      padding: 0 10px 0 10px;
       font-size: @font-size-large;
+      color: @gray-lighter;
+      &:hover {
+        background-color: @gray;
+      }
     }
   }
+}
+
+.audio-block {
+  display: none;
 }
 
 /* Small devices (mobile) */
@@ -76,17 +83,7 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {  
-
-  .multimedia-controls {
-    li {
-      padding: 30px 0 0 0;
-      a {
-        padding: 0 15px 0 15px;
-        font-size: @font-size-h3;
-      }
-    }
-  }
-
+  
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -112,23 +109,22 @@
   .miltimedia-info {
     display: block;
     width: 100%;
-    height: 10px;
+    height: 40px;
     border-top: solid @gray-light 1px;
     text-align: center;
     font-size: @font-size-small;
     color: @gray;
     .info {
       height: auto;
-      padding: 0 0 0 0;
+      padding: 10px 0 10px 0;
     }
   }
 
   .multimedia-controls {
     display: inline-block;
-    width: 40%;
-    height: 30px;
+    width: 25%;
+    height: 20px;
     padding: 0 0 0 0;
-    background-color: white;
     li {
       float: none;
       display: inline-block;
@@ -136,16 +132,21 @@
       vertical-align: top;
       a {
         display: block;
-        padding: 0 5px 0 5px;
+        padding: 0 15px 0 15%px;
         color: @gray;
         font-size: @font-size-large;
+        &:hover {
+          background-color: @gray-light;
+        }
       }
     }
   }
 
   .audio-block {
-    position: absolute;
-    top: 10px;
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    overflow: hidden;
   }
 
 }

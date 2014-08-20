@@ -8,9 +8,7 @@
     <![endif]-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" >
-    <title>Bootstrap 101 Template</title>
-    <!-- Bootstrap -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Test title</title>
     <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +27,7 @@
             </a>
             <nav class="pull-left">
                 <ul class="navbar-nav nav">
-                    <li><a href="#">Band & artist</a></li>
+                    <li><a href="#">Band and artist</a></li>
                     <li><a href="#">Latar</a></li>
                     <li><a href="#">Spelistor</a></li>
                     <li><a href="#">Residence</a></li>
@@ -105,6 +103,42 @@
       <div class="container">
         <div class="tab-content row">
           <div class="tab-pane col-md-4 col-lg-4 active" id="music_">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a href="#" class="panel-like-block pull-right">
+                  434
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </a>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Aautem optio
+                </a>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a href="#" class="panel-like-block pull-right">
+                  44
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </a>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Maiores ullam aspernatur deserunt
+                </a>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a href="#" class="panel-like-block pull-right">
+                  7
+                  <span class="glyphicon glyphicon-thumbs-up"> </span> 
+                </a>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play"></span> 
+                  Blanditiis ratione
+                </a>
+              </div>
+            </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <a href="#" class="panel-like-block pull-right">
@@ -260,15 +294,10 @@
             <img src="img/avatar-img.jpg" class="hidden-md hidden-lg" alt="some text">
             <div class="info">
               Carol Gilbert -
-              <span>A culpa amet vero accusamus</span>
+              <span>A culpa amet vero</span>
             </div>
           </div>
-          <ul class="multimedia-controls">
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-thumbs-up"></span>
-              </a>
-            </li>
+          <ul class="nav nav-pills multimedia-controls hidden-xs hidden-sm">
             <li>
               <a href="#">
                 <span class="glyphicon glyphicon-pause"></span>
@@ -276,24 +305,53 @@
             </li>
             <li>
               <a href="#">
-                <span class="glyphicon glyphicon-step-forward"></span>
+                <span class="glyphicon glyphicon-step-backward"></span>
               </a>
             </li>
             <li>
               <a href="#">
                 <span class="glyphicon glyphicon-step-forward"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-volume-up"></span>
               </a>
             </li>
           </ul>
-          <!-- <audio class="audio-block hidden-sm" controls>
-            <source src="multimedia/horse.ogg" type="audio/ogg">
-            <source src="multimedia/horse.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio> -->
-          <ul class="multimedia-controls">
+          <div class="audio-block">
+            <audio controls>
+              <source src="multimedia/horse.ogg" type="audio/ogg">
+              <source src="multimedia/horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <ul class="nav nav-pills multimedia-controls hidden-xs hidden-sm">
             <li>
               <a href="#">
                 <span class="glyphicon glyphicon-thumbs-up"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-random"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-repeat"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon glyphicon-time"></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-pills multimedia-controls hidden-md hidden-lg">
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-step-forward"></span>
               </a>
             </li>
             <li>
@@ -303,12 +361,7 @@
             </li>
             <li>
               <a href="#">
-                <span class="glyphicon glyphicon-step-forward"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="glyphicon glyphicon-step-forward"></span>
+                <span class="glyphicon glyphicon-thumbs-up"></span>
               </a>
             </li>
           </ul>
@@ -317,16 +370,11 @@
 
     </footer>
 
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      // $('.collapse').collapse()
-      
-    </script>
 
   </body>
 
