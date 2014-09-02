@@ -104,7 +104,37 @@
     }
   }
 
+  .count-container {
+    position: relative;
+    float: none;
+    top: 220px;
+    right: 35px;
+  }
+
+  .count-block {
+    background-color: @white;
+    border: solid @gray-lighter 1px;
+    padding: 1px;
+    color: @blue;
+    font-size: @font-size-small;
+    div {
+      padding: 10px 0;
+      text-align: center;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  .total {
+    padding-top: 10px;
+    color: @blue;
+  }
+
   .sidebar-content {
+    &:first-child {
+      padding-top: 80px;
+    }
     font-size: @font-size-base;
     img {
       width: 40px;
@@ -130,7 +160,9 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {  
-
+  .count-container {
+    right: 85px;
+  }
 }
 
 
