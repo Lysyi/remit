@@ -126,6 +126,41 @@
     }
   }
 
+  .count-nav-pills {
+    > li {
+      float: left;
+
+      // Links rendered as pills
+      > a {
+        padding: 5px 10px;
+        background-color: @gray-lighter;
+        border-radius: 0;
+        color: @gray-light;
+        font-size: @font-size-small;
+        border: solid @gray-light 1px;
+        &:hover {
+          background-color: @blue;
+          color: @white;
+        }
+      }
+      + li {
+        margin-left: 1px;
+      }
+
+      // Active state
+      &.active > a {
+        color: @nav-pills-active-link-hover-color;
+        background-color: @nav-pills-active-link-hover-bg;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        &:hover{
+          background-color: @gray-lighter;
+          color: @gray-light; 
+        }
+      }
+    }
+  }
+
+
   .total {
     padding-top: 10px;
     color: @blue;
